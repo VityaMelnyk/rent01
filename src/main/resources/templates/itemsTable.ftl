@@ -12,6 +12,7 @@
 
 <h3>Item List</h3>
 <br>
+<a href="/index.html">Back</a>
 <div>
 
     <table class="table table-striped table-dark">
@@ -23,9 +24,10 @@
             <th>Created</th>
             <th>Modified</th>
             <th>Delete</th>
+            <th>Edit</th>
         </tr>
         </thead>
-        <#list items as element> <!--Цикл по всем item-->
+        <#list spisok as element> <!--Цикл по всем item-->
             <!--Для кожного item в списке item, який ми отримали з контроллера.Формуєм строку <tr>.
             У етой строки есть 5 ячеек
             Каждая ячейка является полем елементу(id,name,...)-->
@@ -36,13 +38,13 @@
                 <td>${element.description}</td>
                 <td>${element.created_at}</td>
                 <td>${element.modified_at}</td>
-                <td><a href="/web/item/delete/${element.id}" class="btn btn-warning">Delete</a></td>
-                <td><a href="/web/item/delete/${element.id}" class="btn btn-success">Edit</a></td>
+                <td><a href="/web/item/delete/${element.id}" class="btn btn-danger">Delete</a></td>
+                <td><a href="/web/item/edit/${element.id}" class="btn btn-warning">Edit</a></td>
 
                 </tr>
-            </#list>
+        </#list>
 
-        </table>
+    </table>
 </div>
 </body>
 </html>
