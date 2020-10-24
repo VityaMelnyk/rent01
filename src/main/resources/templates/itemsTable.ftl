@@ -12,7 +12,7 @@
 
 <h3>Item List</h3>
 <br>
-<a href="/index.html">Back</a>
+<a href="/index.html" class="btn btn-primary">Back</a>
 <div>
 
     <table class="table table-striped table-dark">
