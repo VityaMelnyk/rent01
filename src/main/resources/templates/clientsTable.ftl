@@ -51,6 +51,7 @@
         </#list>
         </tbody>
         </table>
+    <a href="/web/item/create" class="btn btn-outline-warning">Create</a>
 </div>
 </body>
 </html>
