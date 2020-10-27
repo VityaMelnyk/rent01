@@ -12,7 +12,7 @@
 
 <h3>Item List</h3>
 <br>
-<a href="/index.html" class="btn btn-primary">Back</a>
+<a href="/index.html" class="btn btn-outline-primary">Back</a>
 <div>
 
     <table class="table table-striped table-dark">
@@ -38,13 +38,14 @@
                 <td>${element.description}</td>
                 <td>${element.created_at}</td>
                 <td>${element.modified_at}</td>
-                <td><a href="/web/item/delete/${element.id}" class="btn btn-danger">Delete</a></td>
-                <td><a href="/web/item/edit/${element.id}" class="btn btn-warning">Edit</a></td>
+                <td><a href="/web/item/delete/${element.id}" class="btn btn-outline-danger">Delete</a></td>
+                <td><a href="/web/item/edit/${element.id}" class="btn btn-outline-warning">Edit</a></td>
 
                 </tr>
         </#list>
 
     </table>
+    <a href="/web/item/create" class="btn btn-outline-warning">Create</a>
 </div>
 </body>
 </html>

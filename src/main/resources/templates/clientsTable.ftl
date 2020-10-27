@@ -12,6 +12,7 @@
 
 <h3>Client List</h3>
 <br>
+<a href="/index.html" class="btn btn-outline-primary">Back</a>
 <div>
 
     <table class="table table-striped table-dark">
@@ -43,8 +44,8 @@
                 <td>${element.adres}</td>
                 <td>${element.birthday}</td>
                 <td>${element.description}</td>
-                <td><a href="/web/client/delete/${element.id}" class="btn btn-warning">Delete</a></td>
-                <td><a href="/web/client/edit/${element.id}" class="btn btn-outline-danger">Edit</a></td>
+                <td><a href="/web/client/delete/${element.id}" class="btn btn-outline-danger">Delete</a></td>
+                <td><a href="/web/client/edit/${element.id}" class="btn btn-outline-warning">Edit</a></td>
 
             </tr>
         </#list>
