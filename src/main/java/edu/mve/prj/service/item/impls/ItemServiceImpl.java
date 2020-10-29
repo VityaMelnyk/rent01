@@ -6,6 +6,7 @@ import edu.mve.prj.service.item.interfaces.ICrudItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 @Service
 public class ItemServiceImpl implements ICrudItem {
@@ -15,7 +16,21 @@ public class ItemServiceImpl implements ICrudItem {
 
     @Override
     public Item create(Item item) {
-        return null;
+        if (item.getId()!= null){
+            this.getAll().add(item);
+        }else{
+            Integer id = this.getAll().stream().map(el -> el.getId())
+
+                    .mapToInt(el -> Integer.valueOf(el)).max().orElse(0);
+
+            item.setId(String.valueOf(id+1));
+
+            item.setCreated_at(LocalDateTime.now());
+            item.setModified_at(LocalDateTime.now());
+
+            this.getAll().add(item);
+        }
+        return item;
     }
 
     @Override

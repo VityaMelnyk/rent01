@@ -47,4 +47,8 @@ import java.util.stream.Stream;
         service.create(item);
         return "itemsTable";
     }
+    @RequestMapping("/edit/{id}")
+    String editById(@PathVariable("id") String id){
+        return "hello";
+    }
 }
