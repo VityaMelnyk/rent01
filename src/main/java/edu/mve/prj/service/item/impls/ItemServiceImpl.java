@@ -21,7 +21,7 @@ public class ItemServiceImpl implements ICrudItem {
         }else{
             Integer id = this.getAll().stream().map(el -> el.getId())
 
-                    .mapToInt(el -> Integer.valueOf(el)).max().orElse(0);
+                 .mapToInt(el -> Integer.valueOf(el)).max().orElse(0);
 
             item.setId(String.valueOf(id+1));
 

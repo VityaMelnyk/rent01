@@ -17,6 +17,8 @@ public class Item {
     public Item(String name, String description) {
         this.name = name;
         this.description = description;
+        this.created_at = LocalDateTime.now();
+        this.modified_at = LocalDateTime.now();
     }
 
     public Item(String id, String name, String description, LocalDateTime created_at, LocalDateTime modified_at) {
