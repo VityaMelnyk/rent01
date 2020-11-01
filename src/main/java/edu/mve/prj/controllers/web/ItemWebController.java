@@ -38,14 +38,18 @@ import java.util.stream.Stream;
         service.getAll().remove(item);*/
         return "redirect:/web/item/all";
     }
-    @RequestMapping(value = "/create", method = RequestMethod.GET)
-    public String create(@RequestBody ItemForm form, Model model){
-        System.out.println(form);
+    /*@RequestMapping(value = "/create", method = RequestMethod.GET)
+    String create(@RequestBody ItemForm form, Model model){
+        *//*System.out.println(form);
         Item item = new Item();
         form.setName(form.getName());
         item.setDescription(form.getDescription());
-        service.create(item);
-        return "itemsTable";
+        service.create(item);*/
+    @RequestMapping(value = "/create", method = RequestMethod.GET)
+    String create(ItemForm form, Model model){
+        ItemForm itemForm = new ItemForm();
+        model.addAttribute("itemForm", itemForm);
+        return "itemAddForm";
     }
     @RequestMapping("/edit/{id}")
     String editById(@PathVariable("id") String id){

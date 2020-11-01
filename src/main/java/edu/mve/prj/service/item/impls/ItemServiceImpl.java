@@ -35,7 +35,8 @@ public class ItemServiceImpl implements ICrudItem {
 
     @Override
     public Item get(String id) {
-        return this.getAll().stream().filter(item -> item.getId().equals(id)).findFirst().orElse(null);
+        return this.getAll().stream().filter(item -> item.getId().equals(id)).findFirst()
+                .orElse(null);
     }
 
     @Override
