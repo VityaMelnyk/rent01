@@ -6,9 +6,11 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class ItemForm {
-    private String id;
-    private String name;
-    private String description;
+    private String id = " ";
+    private String name = " ";
+    private String description = " ";
+    private String Created_at = " ";
+    private String Modified_at = " ";
 
     public ItemForm() {
     }
@@ -18,10 +20,12 @@ public class ItemForm {
         this.description = description;
     }
 
-    public ItemForm(String id, String name, String description) {
+    public ItemForm(String id, String name, String description, String created_at, String modified_at) {
         this.id = id;
         this.name = name;
         this.description = description;
+        Created_at = created_at;
+        Modified_at = modified_at;
     }
 
     public String getId() {
@@ -48,12 +52,30 @@ public class ItemForm {
         this.description = description;
     }
 
+    public String getCreated_at() {
+        return Created_at;
+    }
+
+    public void setCreated_at(String created_at) {
+        Created_at = created_at;
+    }
+
+    public String getModified_at() {
+        return Modified_at;
+    }
+
+    public void setModified_at(String modified_at) {
+        Modified_at = modified_at;
+    }
+
     @Override
     public String toString() {
         return "ItemForm{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
+                ", Created_at='" + Created_at + '\'' +
+                ", Modified_at='" + Modified_at + '\'' +
                 '}';
     }
 }

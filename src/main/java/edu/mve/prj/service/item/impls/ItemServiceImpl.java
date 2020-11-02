@@ -16,6 +16,7 @@ public class ItemServiceImpl implements ICrudItem {
 
     @Override
     public Item create(Item item) {
+        System.out.println(item);
         if (item.getId()!= null){
             this.getAll().add(item);
         }else{
@@ -45,8 +46,9 @@ public class ItemServiceImpl implements ICrudItem {
         Item itemToUpdate = this.getAll().stream().filter(el -> el.getId().equals(id))
                 .findFirst().orElse(null);
         int index = this.getAll().indexOf(itemToUpdate);
+        item.setModified_at(LocalDateTime.now());
         this.getAll().set(index, item);
-        return null;
+        return item;
     }
 
     @Override

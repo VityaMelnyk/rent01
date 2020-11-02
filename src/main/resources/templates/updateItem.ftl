@@ -13,11 +13,11 @@
     <fieldset>
         <legend>Add item</legend>
         <form name="item" action="" method="POST">
-            Name:<@spring.formInput "form.name" "" "text"/>
+            name:<@spring.formInput "form.name" "" "text"/>
             <br>
             Description:<@spring.formInput "form.description" "" "text"/>
             <br>
-            <input type="submit" value="Create"/>
+            <input type="submit" value="update"/>
         </form>
     </fieldset>
 </div>
